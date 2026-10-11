@@ -1035,6 +1035,72 @@ section:hover {
     color: #625443;
     line-height: 1.8;
 }
+}
+
+#evidence .archive-panel[hidden] {
+    display: none !important;
+}
+
+#evidence .archive-panel.active {
+    display: block;
+    animation: none;
+}
+
+#evidence .archive-panel h3,
+#evidence .archive-panel p {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    #evidence .archive-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+/* Исправление архивного раздела */
+#evidence,
+#evidence * {
+    box-sizing: border-box;
+}
+
+#evidence .archive-layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.8fr);
+    align-items: start;
+    gap: 36px;
+}
+
+#evidence .archive-index,
+#evidence .archive-pages {
+    min-width: 0;
+    width: 100%;
+}
+
+#evidence .archive-panel[hidden] {
+    display: none !important;
+}
+
+#evidence .archive-panel.active {
+    display: block;
+    min-width: 0;
+    width: 100%;
+}
+
+#evidence .archive-panel h3,
+#evidence .archive-panel p {
+    overflow-wrap: break-word;
+}
+
+#evidence .archive-source {
+    width: 100%;
+    margin-top: 32px;
+}
+
+@media (max-width: 760px) {
+    #evidence .archive-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+}
 
 
 
@@ -1479,7 +1545,11 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
   
+
+    
+
 <section id="evidence" class="archive-section">
+
     <div class="archive-heading">
         <div>
             <p class="archive-kicker">АРХИВ · ДЕЛО № 04</p>
@@ -1498,6 +1568,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <div class="archive-layout">
+
         <aside class="archive-index">
             <p class="index-title">СОДЕРЖАНИЕ ДЕЛА</p>
 
@@ -1539,8 +1610,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </aside>
 
         <div class="archive-pages">
-            <article class="archive-panel active"
-                     id="panel-place">
+
+            <article class="archive-panel active" id="panel-place">
                 <div class="panel-topline">
                     <span>АРХИВНЫЙ ЛИСТ 01</span>
                     <span>ИСТОЧНИКИ И МЕСТА</span>
@@ -1554,27 +1625,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     ландшафт.
                 </p>
 
-
- <div class="archive-note">
-    <span class="note-symbol">✦</span>
-    <p class="archive-note-label">ПАМЯТЬ СКВОЗЬ ВРЕМЯ</p>
-    <h3>След, который остаётся</h3>
-    <p>
-        История живёт не только на страницах книг.
-        Она сохраняется в памяти народа, в памятных местах
-        и в уважении к наследию предков.
-    </p>
-</div> 
-
-                        <h4>Что можно исследовать?</h4>
-                        <p>
-                            Историю памятного места, его состояние,
-                            надписи, происхождение и то, как оно
-                            представлено в исторических публикациях.
-                            Каждый факт важно подтверждать источником.
-                        </p>
-                    </div>
+                <div class="archive-note">
+                    <span class="note-symbol">✦</span>
+                    <p class="archive-note-label">ПАМЯТЬ СКВОЗЬ ВРЕМЯ</p>
+                    <h3>След, который остаётся</h3>
+                    <p>
+                        История живёт не только на страницах книг.
+                        Она сохраняется в памяти народа, в памятных местах
+                        и в уважении к наследию предков.
+                    </p>
                 </div>
+
+                <h4>Что можно исследовать?</h4>
+                <p>
+                    Историю памятного места, его состояние, надписи,
+                    происхождение и то, как оно представлено в исторических
+                    публикациях. Каждый факт важно подтверждать источником.
+                </p>
             </article>
 
             <article class="archive-panel" id="panel-people" hidden>
@@ -1630,7 +1697,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="legacy-icon">01</span>
                     <div>
                         <h4>Изучать</h4>
-                        <p>Сопоставлять публикации, документы и сведения о памятных местах.</p>
+                        <p>
+                            Сопоставлять публикации, документы и сведения
+                            о памятных местах.
+                        </p>
                     </div>
                 </div>
 
@@ -1638,7 +1708,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="legacy-icon">02</span>
                     <div>
                         <h4>Сохранять</h4>
-                        <p>Фиксировать фотографии, надписи и проверенные исторические материалы.</p>
+                        <p>
+                            Фиксировать фотографии, надписи и проверенные
+                            исторические материалы.
+                        </p>
                     </div>
                 </div>
 
@@ -1646,32 +1719,43 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="legacy-icon">03</span>
                     <div>
                         <h4>Передавать</h4>
-                        <p>Делиться знаниями с молодёжью, указывая источники и отделяя факты от преданий.</p>
+                        <p>
+                            Делиться знаниями с молодёжью, указывая источники
+                            и отделяя факты от преданий.
+                        </p>
                     </div>
                 </div>
 
                 <div class="archive-closing">
                     <span>ДЕЛО ОСТАЁТСЯ ОТКРЫТЫМ</span>
-                    <p>У каждого поколения есть возможность узнать прошлое глубже.</p>
+                    <p>
+                        У каждого поколения есть возможность узнать прошлое глубже.
+                    </p>
                 </div>
             </article>
+
         </div>
     </div>
 
     <div class="archive-source">
         <span>ИСТОЧНИК ДЛЯ ИЗУЧЕНИЯ</span>
+
         <a href="https://e-history.kz/ru/prominent-figures/show/12672"
            target="_blank"
            rel="noopener noreferrer">
             Биографический материал об Отеген батыре
             <span aria-hidden="true">↗</span>
         </a>
+
         <p>
             Исторические утверждения следует проверять по источникам;
             устные предания и современные интерпретации требуют отдельной маркировки.
         </p>
     </div>
+
 </section>
+
+
 
 <section id="investigation">
    
