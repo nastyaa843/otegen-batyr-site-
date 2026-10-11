@@ -1102,6 +1102,53 @@ section:hover {
     }
 }
 
+.heritage-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+.heritage-card {
+    margin: 30px 0;
+    padding: 24px;
+    background: #fffdf7;
+    border: 1px solid #e5d5b3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(70, 50, 20, 0.08);
+}
+
+.heritage-card h3 {
+    margin-top: 0;
+}
+
+.heritage-photo {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+    margin: 20px auto;
+    border: 3px solid #b08b45;
+    border-radius: 10px;
+}
+
+.heritage-card a {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .heritage-section {
+        padding: 24px 16px;
+    }
+
+    .heritage-card {
+        padding: 16px;
+    }
+}
+
+
 
 
 </style>
@@ -1838,6 +1885,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
  <section id="legacy">
     
+
 <section class="heritage-section">
     <h2>06. Память и наследие</h2>
 
@@ -1875,11 +1923,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="heritage-card">
         <h3>Улика № 2. Памятник Отеген батыру</h3>
-<img src="monument%20new.jpg" alt="Памятник Отеген батыру">
+<img
+    src="monument%20new.jpg"
     alt="Памятник Отеген батыру"
     class="heritage-photo"
 >
-        <p>
+ <p>
             Памятник находится в селе Отеген-Батыр Илийского района
             Алматинской области. Населённый пункт носит имя
             Отеген батыра, поэтому памятник стал частью местной
@@ -1899,7 +1948,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <h3>Вывод следствия</h3>
-
     <p>
         Мавзолей и памятник представляют разные формы сохранения
         исторической памяти. Они помогают увидеть, как наследие
