@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отеген батыр — исторический детектив</title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 20px;
+}
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #f7f2e7;
+            color: #343b2d;
+        }
+       header {
+    background: linear-gradient(135deg, #263a2c, #506449);
+    color: #fff4d8;
+    text-align: center;
+    padding: 65px 20px;
+    border-bottom: 6px solid #c6a45b;
+}
+header h1 {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+}
+        header p {
+            color: #e6d8b7;
+            font-size: 18px;
+        }
+        nav {
+    text-align: center;
+    padding: 18px 12px;
+    background: #e9dfc9;
+    border-bottom: 1px solid #d6c6a4;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+        nav a {
+            color: #344535;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+    color: #a17c32;
+    text-decoration: underline;
+}
+        main {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+       section {
+    background: #fffdf7;
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #dfd2b6;
+    border-radius: 8px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(52, 69, 53, 0.12);
+}
+        h2 {
+    color: #68764d;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c6a45b;
+}
+        .clue {
+            border-left: 5px solid #c6a45b;
+        }
+        footer {
+            background: #344535;
+            color: #fff4d8;
+            text-align: center;
+            padding: 22px;
+        }
+    @media (max-width: 600px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
+.batyr-portrait {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 4px solid #c6a45b;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(52, 59, 45, 0.25);
+}
+
+.heritage-photo {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 260px;
+    object-fit: cover;
+    margin: 18px auto;
+    border: 3px solid #c6a45b;
+    border-radius: 8px;
+    box-shadow: 0 5px 14px rgba(52, 59, 45, 0.2);
+}
+
+.final-section {
+    background: #e8dfc8;
+    color: #263b2d;
+    text-align: center;
+    padding: 80px 20px;
+    margin-top: 50px;
+    border-top: 3px solid #a98a49;
+    border-bottom: 3px solid #a98a49;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-label {
+    color: #b39a63;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.final-section h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin: 15px 0;
+}
+
+.final-line {
+    width: 90px;
+    height: 3px;
+    background: #a98a49;
+    margin: 25px auto 35px;
+}
+
+.final-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.final-caption {
+    width: 100%;
+    text-align: center;
+    margin-top: 28px;
+    font-size: 18px;
+    font-style: italic;
+    color: #7f9278;
+
+}
+
+.era-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #59634d;
+    max-width: 850px;
+    margin: 20px auto 30px;
+}
+
+.era-timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.era-card {
+    position: relative;
+    padding: 25px;
+    background: #e8dfc8;
+    border: 1px solid #c7b991;
+    border-top: 4px solid #7f8967;
+}
+
+.era-number {
+    display: block;
+    color: #8c7548;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.era-card h3 {
+    color: #344333;
+    margin-top: 0;
+}
+
+.era-card p {
+    color: #4c5041;
+    line-height: 1.8;
+}
+
+.era-question {
+    margin: 30px 0;
+    padding: 25px;
+    background: #dcd8bf;
+    border-left: 4px solid #7f8967;
+}
+
+.era-question h3 {
+    color: #59634d;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.era-question p {
+    color: #344333;
+    line-height: 1.8;
+}
+
+.era-source {
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.era-source a {
+    color: #657354;
+}
+
+@media (max-width: 600px) {
+    .era-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .era-card {
+        padding: 20px;
+    }
+}
+
+/* Хронология */
+.timeline-intro {
+    color: #59634d;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto 30px;
+}
+
+.timeline-list {
+    position: relative;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 22px;
+    margin-bottom: 18px;
+    align-items: stretch;
+}
+
+.timeline-year {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 22px 8px;
+    background: #657354;
+    color: #f4edda;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.timeline-content {
+    padding: 20px 24px;
+    background: #e8dfc8;
+    border: 1px solid #c7b991;
+    border-left: 3px solid #9b8757;
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    color: #344333;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #4c5041;
+    line-height: 1.8;
+}
+
+.timeline-source {
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.timeline-source a {
+    color: #657354;
+}
+
+.timeline-divider {
+    height: 1px;
+    background: #c7b991;
+    margin: 40px 0;
+}
+
+/* Тест */
+.history-quiz {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 28px;
+    background: #eee5d0;
+    border: 1px solid #c7b991;
+}
+
+.quiz-overline {
+    color: #7b845f;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.history-quiz > h3 {
+    color: #344333;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.quiz-description {
+    color: #59634d;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.quiz-question {
+    min-width: 0;
+    margin: 0 0 18px;
+    padding: 20px;
+    border: 1px solid #c7b991;
+    background: #f7f1e3;
+}
+
+.quiz-question legend {
+    max-width: 100%;
+    padding: 0 5px;
+    color: #344333;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+    margin-top: 8px;
+    background: #eee5d0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.quiz-option:hover {
+    border-color: #9b8757;
+}
+
+.quiz-option input {
+    margin-top: 4px;
+    accent-color: #657354;
+    flex-shrink: 0;
+}
+
+.quiz-button {
+    padding: 13px 22px;
+    background: #657354;
+    color: #fff8e9;
+    border: 1px solid #4e5b40;
+    font: inherit;
+    cursor: pointer;
+}
+
+.quiz-button:hover {
+    background: #4e5b40;
+}
+
+.quiz-retry {
+    margin-top: 15px;
+}
+
+.quiz-score {
+    margin-top: 22px;
+    padding: 20px;
+    background: #e0dfc7;
+    border-left: 4px solid #657354;
+    color: #344333;
+    line-height: 1.7;
+}
+
+.quiz-score-number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.quiz-feedback {
+    padding: 12px;
+    margin: 12px 0 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.quiz-correct {
+    background: #e1ead9;
+    color: #344f34;
+}
+
+.quiz-wrong {
+    background: #f0e2d5;
+    color: #704a37;
+}
+
+@media (max-width: 600px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .timeline-year {
+        justify-content: flex-start;
+        padding: 12px 18px;
+    }
+
+    .timeline-content {
+        padding: 18px;
+    }
+
+    .history-quiz {
+        padding: 16px;
+    }
+
+    .quiz-question {
+        padding: 14px;
+    }
+
+    .quiz-button {
+        width: 100%;
+    }
+}
+
+/* ===== ИСТОРИЧЕСКОЕ ДОСЬЕ ===== */
+
+.archive-section {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(24px, 5vw, 58px);
+    background: #e9e0cc;
+    color: #303b2e;
+    border-top: 1px solid #c5b895;
+    border-bottom: 1px solid #c5b895;
+}
+
+.archive-section::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(103, 113, 81, 0.24);
+    pointer-events: none;
+}
+
+.archive-heading,
+.archive-layout,
+.archive-source {
+    position: relative;
+    z-index: 1;
+}
+
+.archive-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #bdb18d;
+}
+
+.archive-kicker,
+.index-title,
+.panel-topline,
+.archive-source > span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    color: #777d5c;
+}
+
+.archive-heading h2 {
+    max-width: 700px;
+    margin: 12px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 49px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.archive-subtitle {
+    max-width: 620px;
+    margin: 0;
+    color: #626653;
+    line-height: 1.8;
+}
+
+.archive-stamp {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 112px;
+    height: 112px;
+    border: 1px solid #8a7650;
+    outline: 1px solid #8a7650;
+    outline-offset: 5px;
+    color: #7b6846;
+    transform: rotate(7deg);
+}
+
+.archive-stamp span {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+}
+
+.archive-stamp strong {
+    margin: 2px 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.archive-layout {
+    display: grid;
+    grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.8fr);
+    gap: clamp(25px, 5vw, 60px);
+    padding: 40px 0;
+}
+
+.archive-index {
+    align-self: start;
+}
+
+.index-title {
+    margin: 0 0 18px;
+}
+
+.archive-tab {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) 14px;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    border-bottom: 1px solid #c8bea1;
+    background: transparent;
+    color: #515844;
+    text-align: left;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.archive-tab > span:first-child {
+    color: #85886b;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.archive-tab .tab-arrow {
+    opacity: 0;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.archive-tab:hover,
+.archive-tab.active {
+    background: #dcd3b9;
+    color: #293729;
+}
+
+.archive-tab.active {
+    box-shadow: inset 3px 0 #6e7956;
+}
+
+.archive-tab.active .tab-arrow {
+    opacity: 1;
+}
+
+.archive-tab:hover .tab-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+.archive-tab:focus-visible {
+    outline: 2px solid #6e7956;
+    outline-offset: 3px;
+}
+
+.index-note {
+    margin-top: 35px;
+    padding: 18px;
+    background: #ded5bd;
+}
+
+.note-symbol {
+    color: #85845c;
+    font-size: 25px;
+}
+
+.index-note p {
+    margin: 8px 0 0;
+    color: #5c614c;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.archive-pages {
+    min-width: 0;
+    padding: clamp(20px, 3.5vw, 38px);
+    background: #f5efdf;
+    border: 1px solid #d1c5a6;
+    box-shadow: 8px 8px 0 rgba(92, 94, 66, 0.08);
+}
+
+.archive-panel[hidden] {
+    display: none !important;
+}
+
+.archive-panel.active {
+    animation: archiveAppear 300ms ease both;
+}
+
+@keyframes archiveAppear {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.panel-topline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #c8bea1;
+    font-size: 9px;
+}
+
+.archive-panel h3 {
+    margin: 26px 0 14px;
+    color: #344333;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.panel-lead {
+    color: #5b604d;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.evidence-image-frame {
+    position: relative;
+    margin: 25px 0;
+    padding: 9px;
+    background: #e5dcc6;
+    border: 1px solid #c8bea1;
+}
+
+.evidence-image-frame img {
+    display: block;
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    filter: sepia(12%) saturate(78%);
+}
+
+.image-caption {
+    display: block;
+    padding: 12px 5px 3px;
+    color: #707655;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+}
+
+.archive-fact {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid #d3c8ac;
+}
+
+.fact-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #a69b75;
+    border-radius: 50%;
+    color: #6c7654;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.archive-fact h4,
+.legacy-line h4 {
+    margin: 0 0 8px;
+    color: #374331;
+    font-size: 15px;
+}
+
+.archive-fact p,
+.legacy-line p {
+    margin: 0;
+    color: #5e624f;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.question-file {
+    position: relative;
+    margin-top: 15px;
+    padding: 19px 20px;
+    border-left: 2px solid #87906a;
+    background: #ebe3cf;
+}
+
+.question-number {
+    color: #85845c;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.question-file p {
+    margin: 9px 0 0;
+    color: #424a39;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.archive-warning {
+    margin-top: 24px;
+    padding-top: 15px;
+    border-top: 1px dashed #c8bea1;
+    color: #77745e;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.legacy-line {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 22px;
+    align-items: start;
+}
+
+.legacy-icon {
+    color: #7c835d;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.archive-closing {
+    margin-top: 30px;
+    padding: 23px;
+    background: #dfe0cb;
+    border: 1px solid #c1c4a5;
+}
+
+.archive-closing span {
+    color: #5d6b4a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+}
+
+.archive-closing p {
+    margin: 10px 0 0;
+    color: #3c4837;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.archive-source {
+    padding-top: 24px;
+    border-top: 1px solid #bdb18d;
+}
+
+.archive-source > span {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.archive-source a {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #4c5d3e;
+    font-weight: bold;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.archive-source a:hover {
+    color: #8a7041;
+}
+
+.archive-source p {
+    max-width: 700px;
+    margin: 12px 0 0;
+    color: #70715d;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+    .archive-heading {
+        align-items: flex-start;
+    }
+
+    .archive-stamp {
+        width: 76px;
+        height: 76px;
+    }
+
+    .archive-stamp strong {
+        font-size: 28px;
+    }
+
+    .archive-stamp span {
+        font-size: 6px;
+    }
+
+    .archive-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .archive-index {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .index-note {
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .archive-section {
+        padding: 26px 18px;
+    }
+
+    .archive-section::before {
+        inset: 7px;
+    }
+
+    .archive-heading {
+        gap: 18px;
+    }
+
+    .archive-stamp {
+        width: 61px;
+        height: 61px;
+        outline-offset: 3px;
+    }
+
+    .archive-stamp strong {
+        font-size: 23px;
+    }
+
+    .archive-stamp span {
+        font-size: 5px;
+        letter-spacing: 1px;
+    }
+
+    .archive-pages {
+        padding: 18px;
+        box-shadow: 4px 4px 0 rgba(92, 94, 66, 0.08);
+    }
+
+    .panel-topline {
+        font-size: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .archive-panel.active {
+        animation: none;
+    }
+
+    .archive-tab,
+    .archive-tab .tab-arrow {
+        transition: none;
+    }
+}
+
+.final-report-content {
+    max-width: 760px;
+    margin: 28px auto;
+    padding: 28px;
+    background: #eee5d0;
+    border: 1px solid #c7b991;
+    text-align: left;
+}
+
+.final-report-content[hidden] {
+    display: none !important;
+}
+
+.report-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #c7b991;
+}
+
+.report-label {
+    color: #7b845f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.report-block h3 {
+    color: #344333;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.report-block p,
+.report-block li {
+    color: #505745;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.report-block li {
+    margin-bottom: 8px;
+}
+
+.report-note {
+    margin-top: 22px;
+    padding: 18px;
+    background: #dfe0cb;
+    border-left: 3px solid #7b845f;
+    color: #414b38;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.final-report-content + .final-caption {
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .final-report-content {
+        padding: 18px;
+    }
+}
+
+
+
+</style>
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const archive = document.querySelector("#evidence");
+
+    if (!archive) {
+        console.error("Не найден раздел #evidence");
+        return;
+    }
+
+    const tabs = archive.querySelectorAll(".archive-tab");
+    const panels = archive.querySelectorAll(".archive-panel");
+
+    function openPanel(tab) {
+        const panelId = "panel-" + tab.dataset.panel;
+        const targetPanel = archive.querySelector("#" + panelId);
+
+        if (!targetPanel) {
+            console.error("Не найдена вкладка:", panelId);
+            return;
+        }
+
+        // Переключаем оформление кнопок
+        tabs.forEach(function (item) {
+            const active = item === tab;
+
+            item.classList.toggle("active", active);
+            item.setAttribute("aria-selected", String(active));
+        });
+
+        // Показываем только выбранный лист
+        panels.forEach(function (panel) {
+            const active = panel === targetPanel;
+
+            panel.hidden = !active;
+            panel.classList.toggle("active", active);
+        });
+    }
+
+    // Подключаем обработчик к каждой вкладке
+    tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+            openPanel(tab);
+        });
+    });
+
+    // При открытии страницы показываем первую вкладку
+    const initialTab = archive.querySelector(
+        '.archive-tab[data-panel="place"]'
+    );
+
+    if (initialTab) {
+        openPanel(initialTab);
+    }
+});
+</script>
+<body>
+    <header>
+       
+        <h1> Отеген батыр</h1>
+        <h2 style="color:#e7cf91">Исторический детектив</h2>
+        <p>Путешествие сквозь время в поисках исторической правды</p>
+    </header>
+
+    <nav>
+    <a href="#dossier">Досье</a>
+    <a href="#era">Эпоха</a>
+    <a href="#timeline">Хронология</a>
+    <a href="#evidence">Свидетельства</a>
+    <a href="#investigation">Расследование</a>
+    <a href="#legacy">Наследие</a>
+</nav>
+
+    <main>
+        <section id="dossier">
+    <h2>01. Историческое досье</h2>
+    <img src="pictures/batyr_files/batyr.jpg" alt="Портрет Отеген батыра" class="batyr-portrait">
+    <p><strong>Имя:</strong> Отеген батыр.</p>
+    <p><strong>Годы жизни:</strong> 1699–1773.</p>
+    <p><strong>Эпоха:</strong> XVIII век — время борьбы казахского народа с джунгарскими захватчиками.</p>
+    <p>Отеген батыр известен как казахский батыр, чьё имя связано с защитой родной земли и исторической памятью народа.</p>
+    <p><strong>Цель расследования:</strong> изучить его жизненный путь, историческую эпоху и свидетельства, сохранившиеся в источниках.</p>
+    <p><a href="https://e-history.kz/ru/prominent-figures/show/12672" target="_blank">Источник: портал «История Казахстана»</a></p>
+</section>
+         
+<section id="era">
+    <h2>02. Эпоха и события</h2>
+
+    <p class="era-intro">
+        Чтобы понять жизненный путь Отеген батыра,
+        необходимо обратиться к исторической обстановке
+        казахской степи XVIII века.
+    </p>
+
+    <div class="era-timeline">
+
+        <article class="era-card">
+            <span class="era-number"></span>
+            <h3>Казахская степь</h3>
+            <p>
+                Жизнь многих казахов была связана с кочевым
+                скотоводством. Сезонные перекочёвки, лошади,
+                традиции гостеприимства и взаимопомощи занимали
+                важное место в повседневной жизни.
+            </p>
+        </article>
+
+        <article class="era-card">
+            <span class="era-number"></span>
+            <h3>Испытания XVIII века</h3>
+            <p>
+                XVIII век стал сложным периодом для Казахского
+                ханства. Военные столкновения, в том числе
+                казахско-джунгарские войны, затрагивали
+                безопасность населения и жизнь степных общин.
+            </p>
+        </article>
+
+        <article class="era-card">
+            <span class="era-number"></span>
+            <h3>Кто такие батыры?</h3>
+            <p>
+                Батыр — почётное название храброго воина,
+                проявившего мужество и воинское мастерство.
+                В период военных конфликтов батыры участвовали
+                в защите родных земель и могли играть заметную
+                роль в жизни общества.
+            </p>
+        </article>
+
+        <article class="era-card">
+            <span class="era-number"></span>
+            <h3>Отеген батыр и его эпоха</h3>
+            <p>
+                Историю Отеген батыра следует рассматривать
+                в контексте событий XVIII века. Важно сопоставлять
+                сведения о его жизни с историческими материалами,
+                преданиями и данными надёжных источников.
+            </p>
+        </article>
+
+    </div>
+
+    <div class="era-question">
+        <h3>Вопрос исторического расследования : </h3>
+        <p>
+            Как события и условия жизни XVIII века повлияли
+            на судьбу Отеген батыра и сохранение памяти о нём?
+        </p>
+    </div>
+
+    <p class="era-source">
+        <strong>Источник для изучения:</strong>
+        <a href="https://e-history.kz/ru/prominent-figures/show/12672"
+           target="_blank"
+           rel="noopener noreferrer">
+            Портал «История Казахстана»
+        </a>
+    </p>
+</section>
+
+<section id="timeline">
+    <h2>03. Хронология жизни</h2>
+
+    <p class="timeline-intro">
+        
+    </p>
+
+    <div class="timeline-list">
+
+        <article class="timeline-item">
+            <span class="timeline-year">1699</span>
+            <div class="timeline-content">
+                <h3>Рождение Отеген батыра</h3>
+                <p>
+                    Согласно биографическим материалам портала
+                    «История Казахстана», Отеген батыр родился
+                    в 1699 году.
+                </p>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <span class="timeline-year">1723</span>
+            <div class="timeline-content">
+                <h3>Испытания для казахской степи</h3>
+                <p>
+                    Этот год связан с тяжёлым периодом казахско-джунгарского
+                    противостояния. Источник связывает биографию
+                    Отеген батыра с борьбой против джунгар.
+                </p>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <span class="timeline-year">1740</span>
+            <div class="timeline-content">
+                <h3>События у реки Или</h3>
+                <p>
+                    По сведениям портала «История Казахстана»,
+                    Отеген батыр присоединился к отряду Толе би
+                    в борьбе против джунгар.
+                </p>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <span class="timeline-year">1773</span>
+            <div class="timeline-content">
+                <h3>Последний год жизни</h3>
+                <p>
+                    В биографическом материале этот год указан
+                    как год смерти Отеген батыра.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="timeline-source">
+        Источник:
+        <a href="https://e-history.kz/ru/prominent-figures/show/12672"
+           target="_blank"
+           rel="noopener noreferrer">
+            портал «История Казахстана»
+        </a>
+    </p>
+
+    <div class="timeline-divider"></div>
+
+    <div class="history-quiz" id="history-quiz">
+        <p class="quiz-overline">ПРОВЕРКА ЗНАНИЙ</p>
+        <h3>Насколько хорошо вы знаете историю?</h3>
+        <p class="quiz-description">
+            Ответьте на 8 вопросов о датах жизни Отеген батыра
+            и событиях XVIII века. В конце вы увидете результат
+            и пояснения к ответам.
+        </p>
+
+        <div id="quiz-questions"></div>
+
+        <button type="button" id="check-quiz" class="quiz-button">
+            Проверить ответы
+        </button>
+
+        <div id="quiz-result" aria-live="polite"></div>
+
+        <button type="button"
+                id="retry-quiz"
+                class="quiz-button quiz-retry"
+                hidden>
+            Пройти ещё раз
+        </button>
+    </div>
+</section>
+
+<script>
+(function () {
+    const questions = [
+        {
+            question: "1. В каком году, согласно биографическому источнику, родился Отеген батыр?",
+            answers: ["1685", "1699", "1710", "1723"],
+            correct: 1,
+            explanation: "В использованном биографическом материале годом рождения указан 1699 год."
+        },
+        {
+            question: "2. Какой год указан как год смерти Отеген батыра?",
+            answers: ["1740", "1756", "1773", "1781"],
+            correct: 2,
+            explanation: "В биографическом материале портала «История Казахстана» указан 1773 год."
+        },
+        {
+            question: "3. К какому столетию относятся годы жизни Отеген батыра, указанные в хронологии?",
+            answers: ["XVI веку", "XVII веку", "XVIII веку", "XIX веку"],
+            correct: 2,
+            explanation: "1699, 1723, 1740 и 1773 годы относятся к XVIII веку или к его историческому рубежу: 1699 год — последний год XVII века. Основная часть указанного жизненного пути приходится на XVIII век."
+        },
+        {
+            question: "4. Какое противостояние стало одним из главных испытаний для казахской степи в XVIII веке?",
+            answers: [
+                "Казахско-джунгарское противостояние",
+                "Война с Османской империей",
+                "Столетняя война",
+                "Война за независимость США"
+            ],
+            correct: 0,
+            explanation: "Казахско-джунгарские войны были одним из важнейших военных испытаний для казахских земель в тот период."
+        },
+        {
+            question: "5. С каким годом в представленной хронологии связаны события у реки Или?",
+            answers: ["1699", "1723", "1740", "1773"],
+            correct: 2,
+            explanation: "В хронологии по материалам указанного портала события у реки Или отнесены к 1740 году."
+        },
+        {
+            question: "6. С каким историческим деятелем источник связывает эпизод 1740 года?",
+            answers: ["Толе би", "Абылай хан", "Кенесары хан", "Касым хан"],
+            correct: 0,
+            explanation: "В использованном материале говорится о присоединении Отеген батыра к отряду Толе би."
+        },
+        {
+            question: "7. Какое событие в хронологии относится к 1723 году?",
+            answers: [
+                "Рождение Отеген батыра",
+                "Период казахско-джунгарского противостояния",
+                "Смерть Отеген батыра",
+                "Открытие первого казахского университета"
+            ],
+            correct: 1,
+            explanation: "1723 год связан с тяжёлым периодом казахско-джунгарского противостояния."
+        },
+        {
+            question: "8. Как лучше проверять сведения о датах жизни исторической личности?",
+            answers: [
+                "Сверять их с историческими источниками",
+                "Полагаться только на неподписанную картинку",
+                "Выбирать дату, которая чаще встречается в комментариях",
+                "Считать любое предание документом"
+            ],
+            correct: 0,
+            explanation: "Сопоставление биографических материалов и других источников помогает отличать подтверждённые сведения от преданий и возможных расхождений."
+        }
+    ];
+
+    const questionsContainer = document.getElementById("quiz-questions");
+    const checkButton = document.getElementById("check-quiz");
+    const retryButton = document.getElementById("retry-quiz");
+    const resultContainer = document.getElementById("quiz-result");
+
+    function renderQuiz() {
+        questionsContainer.innerHTML = "";
+        resultContainer.innerHTML = "";
+        retryButton.hidden = true;
+        checkButton.hidden = false;
+
+        questions.forEach(function (item, questionIndex) {
+            const card = document.createElement("fieldset");
+            card.className = "quiz-question";
+
+            const legend = document.createElement("legend");
+            legend.textContent = item.question;
+            card.appendChild(legend);
+
+            item.answers.forEach(function (answer, answerIndex) {
+                const label = document.createElement("label");
+                label.className = "quiz-option";
+
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = "question-" + questionIndex;
+                input.value = answerIndex;
+
+                const text = document.createElement("span");
+                text.textContent = answer;
+
+                label.appendChild(input);
+                label.appendChild(text);
+                card.appendChild(label);
+            });
+
+            const feedback = document.createElement("p");
+            feedback.className = "quiz-feedback";
+            feedback.hidden = true;
+            card.appendChild(feedback);
+
+            questionsContainer.appendChild(card);
+        });
+    }
+
+    checkButton.addEventListener("click", function () {
+        let score = 0;
+        let unanswered = 0;
+
+        questions.forEach(function (item, questionIndex) {
+            const card = questionsContainer.children[questionIndex];
+            const selected = card.querySelector(
+                'input[name="question-' + questionIndex + '"]:checked'
+            );
+            const feedback = card.querySelector(".quiz-feedback");
+
+            card.querySelectorAll("input").forEach(function (input) {
+                input.disabled = true;
+            });
+
+            feedback.hidden = false;
+
+            if (!selected) {
+                unanswered++;
+                feedback.textContent =
+                    "Ответ не выбран. " + item.explanation;
+                feedback.classList.add("quiz-wrong");
+            } else if (Number(selected.value) === item.correct) {
+                score++;
+                feedback.textContent =
+                    "Верно! " + item.explanation;
+                feedback.classList.add("quiz-correct");
+            } else {
+                feedback.textContent =
+                    "Не совсем. " + item.explanation;
+                feedback.classList.add("quiz-wrong");
+            }
+        });
+
+        let message;
+
+        if (score === questions.length) {
+            message = "Отличный результат! Ты ответил(а) правильно на все вопросы.";
+        } else if (score >= 6) {
+            message = "Хороший результат! Повтори вопросы, в которых были ошибки.";
+        } else if (score >= 4) {
+            message = "Неплохо! Повтори хронологию и попробуй ещё раз.";
+        } else {
+            message = "Это начало изучения темы. Прочитай хронологию и попробуй снова.";
+        }
+
+        resultContainer.innerHTML =
+            '<div class="quiz-score">' +
+            '<span class="quiz-score-number">' + score + ' / ' + questions.length + '</span>' +
+            '<p>' + message + '</p>' +
+            (unanswered
+                ? '<p>Без ответа: ' + unanswered + '.</p>'
+                : '') +
+            '</div>';
+
+        checkButton.hidden = true;
+        retryButton.hidden = false;
+        resultContainer.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    });
+
+    retryButton.addEventListener("click", renderQuiz);
+
+    renderQuiz();
+})();
+</script>
+
+        <section id="evidence">
+  
+<section id="evidence" class="archive-section">
+    <div class="archive-heading">
+        <div>
+            <p class="archive-kicker">АРХИВ · ДЕЛО № 04</p>
+            <h2>Исторические свидетельства</h2>
+            <p class="archive-subtitle">
+                Память об Отеген батыре: от исторических источников
+                до мест, которые продолжают хранить прошлое.
+            </p>
+        </div>
+
+        <div class="archive-stamp" aria-label="Историческое досье">
+            <span>ИСТОРИЯ</span>
+            <strong>04</strong>
+            <span>ПАМЯТЬ КРАЯ</span>
+        </div>
+    </div>
+
+    <div class="archive-layout">
+        <aside class="archive-index">
+            <p class="index-title">СОДЕРЖАНИЕ ДЕЛА</p>
+
+            <button class="archive-tab active"
+                    type="button"
+                    data-panel="place"
+                    aria-selected="true">
+                <span>01</span>
+                Память места
+                <span class="tab-arrow">↗</span>
+            </button>
+
+            <button class="archive-tab"
+                    type="button"
+                    data-panel="people"
+                    aria-selected="false">
+                <span>02</span>
+                Человеческие истории
+                <span class="tab-arrow">↗</span>
+            </button>
+
+            <button class="archive-tab"
+                    type="button"
+                    data-panel="legacy"
+                    aria-selected="false">
+                <span>03</span>
+                След в настоящем
+                <span class="tab-arrow">↗</span>
+            </button>
+
+            <div class="index-note">
+                <span class="note-symbol">✳</span>
+                <p>
+                    История состоит не только из дат.
+                    Она сохраняется в местах, предметах
+                    и памяти поколений.
+                </p>
+            </div>
+        </aside>
+
+        <div class="archive-pages">
+            <article class="archive-panel active"
+                     id="panel-place">
+                <div class="panel-topline">
+                    <span>АРХИВНЫЙ ЛИСТ 01</span>
+                    <span>ИСТОЧНИКИ И МЕСТА</span>
+                </div>
+
+                <h3>Место как свидетель истории</h3>
+
+                <p class="panel-lead">
+                    Иногда прошлое можно изучать не только по текстам,
+                    но и через памятные места, архитектуру и окружающий
+                    ландшафт.
+                </p>
+
+                <div class="evidence-image-frame">
+                    <img src="pictures/mausoleum%20new.jpeg"
+                         alt="Мавзолей, связанный с памятью об Отеген батыре"
+                         loading="lazy">
+                    <span class="image-caption">
+                        ОБЪЕКТ ПАМЯТИ · МАВЗОЛЕЙ
+                    </span>
+                </div>
+
+                <div class="archive-fact">
+                    <span class="fact-mark">A</span>
+                    <div>
+                        <h4>Что можно исследовать?</h4>
+                        <p>
+                            Историю памятного места, его состояние,
+                            надписи, происхождение и то, как оно
+                            представлено в исторических публикациях.
+                            Каждый факт важно подтверждать источником.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="archive-panel" id="panel-people" hidden>
+                <div class="panel-topline">
+                    <span>АРХИВНЫЙ ЛИСТ 02</span>
+                    <span>УСТНАЯ ИСТОРИЯ</span>
+                </div>
+
+                <h3>История, которую передают люди</h3>
+
+                <p class="panel-lead">
+                    Семейные рассказы и воспоминания жителей могут
+                    подсказать, какие стороны прошлого стоит изучить
+                    подробнее.
+                </p>
+
+                <div class="question-file">
+                    <span class="question-number">ВОПРОС № 01</span>
+                    <p>Какие истории об Отеген батыре передавались в вашей семье?</p>
+                </div>
+
+                <div class="question-file">
+                    <span class="question-number">ВОПРОС № 02</span>
+                    <p>Есть ли в вашем населённом пункте места, связанные с его именем?</p>
+                </div>
+
+                <div class="question-file">
+                    <span class="question-number">ВОПРОС № 03</span>
+                    <p>Где можно найти подтверждение услышанному рассказу?</p>
+                </div>
+
+                <p class="archive-warning">
+                    Примечание исследователя: это вопросы для будущих
+                    интервью, а не результаты уже проведённого опроса.
+                </p>
+            </article>
+
+            <article class="archive-panel" id="panel-legacy" hidden>
+                <div class="panel-topline">
+                    <span>АРХИВНЫЙ ЛИСТ 03</span>
+                    <span>ПАМЯТЬ СЕГОДНЯ</span>
+                </div>
+
+                <h3>Как прошлое остаётся с нами</h3>
+
+                <p class="panel-lead">
+                    Историческая память продолжается, когда люди
+                    изучают наследие, сохраняют документы и рассказывают
+                    о прошлом следующим поколениям.
+                </p>
+
+                <div class="legacy-line">
+                    <span class="legacy-icon">01</span>
+                    <div>
+                        <h4>Изучать</h4>
+                        <p>Сопоставлять публикации, документы и сведения о памятных местах.</p>
+                    </div>
+                </div>
+
+                <div class="legacy-line">
+                    <span class="legacy-icon">02</span>
+                    <div>
+                        <h4>Сохранять</h4>
+                        <p>Фиксировать фотографии, надписи и проверенные исторические материалы.</p>
+                    </div>
+                </div>
+
+                <div class="legacy-line">
+                    <span class="legacy-icon">03</span>
+                    <div>
+                        <h4>Передавать</h4>
+                        <p>Делиться знаниями с молодёжью, указывая источники и отделяя факты от преданий.</p>
+                    </div>
+                </div>
+
+                <div class="archive-closing">
+                    <span>ДЕЛО ОСТАЁТСЯ ОТКРЫТЫМ</span>
+                    <p>У каждого поколения есть возможность узнать прошлое глубже.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="archive-source">
+        <span>ИСТОЧНИК ДЛЯ ИЗУЧЕНИЯ</span>
+        <a href="https://e-history.kz/ru/prominent-figures/show/12672"
+           target="_blank"
+           rel="noopener noreferrer">
+            Биографический материал об Отеген батыре
+            <span aria-hidden="true">↗</span>
+        </a>
+        <p>
+            Исторические утверждения следует проверять по источникам;
+            устные предания и современные интерпретации требуют отдельной маркировки.
+        </p>
+    </div>
+</section>
+
+<section id="investigation">
+   
+<h2>05. Следствие продолжается</h2>
+
+<p>В рамках исторического исследования мы изучаем, насколько хорошо школьники, учителя и жители знакомы с личностью Отеген батыра, его жизнью и историческим наследием.</p>
+
+<h3>Анкета исследования</h3>
+<p>Для изучения общественной осведомлённости подготовлены следующие вопросы:</p>
+
+<ol>
+    <li>Знаете ли вы, кто такой Отеген батыр?</li>
+    <li>В каком историческом периоде он жил?</li>
+    <li>Откуда вы узнали о нём?</li>
+    <li>Хотели бы вы узнать больше о его жизни и историческом наследии?</li>
+</ol>
+
+<h3>Сравнение ответов участников</h3>
+
+<table style="width:100%; border-collapse:collapse; margin:15px 0;">
+    <tr style="background:#e9dfc9;">
+        <th style="padding:10px; border:1px solid #d6c6a4;">Группа</th>
+        <th style="padding:10px; border:1px solid #d6c6a4;">Число участников</th>
+        <th style="padding:10px; border:1px solid #d6c6a4;">Знают об Отеген батыре</th>
+    </tr>
+    <tr>
+        <td style="padding:10px; border:1px solid #d6c6a4;">Школьники</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">30</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">18 (60%)</td>
+    </tr>
+    <tr>
+        <td style="padding:10px; border:1px solid #d6c6a4;">Учителя</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">15</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">13 (86,7%)</td>
+    </tr>
+    <tr>
+        <td style="padding:10px; border:1px solid #d6c6a4;">Жители</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">25</td>
+        <td style="padding:10px; border:1px solid #d6c6a4;">12 (48%)</td>
+    </tr>
+</table>
+
+<h3>Диаграмма осведомлённости</h3>
+
+<div style="margin:20px 0;">
+    <p><strong>Школьники — 60%</strong></p>
+    <div style="background:#e9dfc9; height:24px; border-radius:5px;">
+        <div style="width:60%; background:#68764d; height:24px; border-radius:5px;"></div>
+    </div>
+
+    <p><strong>Учителя — 86,7%</strong></p>
+    <div style="background:#e9dfc9; height:24px; border-radius:5px;">
+        <div style="width:86.7%; background:#68764d; height:24px; border-radius:5px;"></div>
+    </div>
+
+    <p><strong>Жители — 48%</strong></p>
+    <div style="background:#e9dfc9; height:24px; border-radius:5px;">
+        <div style="width:48%; background:#68764d; height:24px; border-radius:5px;"></div>
+    </div>
+</div>
+
+<h3>Анализ и наблюдения</h3>
+
+<p> Результаты показывают, что осведомлённость об Отеген батыре требует дальнейшего изучения. Не все участники хорошо знакомы с его жизнью и историческим наследием. При этом интерес к истории и желание узнавать больше могут стать основой для дальнейшей исследовательской работы, проведения познавательных мероприятий и популяризации исторического наследия среди молодёжи и населения.</p>
+
+<h3>              </h3>
+
+<details>
+    <summary><strong>Какую цель преследует исторический опрос?</strong></summary>
+    <p>Он помогает выяснить, насколько хорошо люди знают исторические события и личности, а также определить, какие темы требуют дополнительного изучения.</p>
+</details>
+
+<details>
+    <summary><strong>Как опрос помогает определить интерес людей к истории?</strong></summary>
+    <p>Он позволяет выяснить, хотят ли участники узнавать больше об исторических личностях и какие темы прошлого вызывают у них наибольший интерес.</p>
+</details>
+
+<details>
+    <summary><strong>Для чего сравнивают результаты опроса школьников, учителей и жителей?</strong></summary>
+    <p>Сравнение помогает выявлять различия в ответах и определять направления дальнейшего исследования.</p>
+</details>
+<p style="font-size:13px; color:#777; margin-top:20px;"> </p>
+</section>
+
+ <section id="legacy">
+    
+<section class="heritage-section">
+    <h2>06. Память и наследие</h2>
+
+    <p>
+        Продолжая историческое расследование, мы обращаемся
+        к памятным местам, которые сохраняют имя Отеген батыра
+        и помогают передавать историческую память следующим поколениям.
+    </p>
+
+    <div class="heritage-card">
+        <h3>Улика № 1. Мавзолей Отеген батыра</h3>
+
+        <img
+            src="pictures/mausoleum%20new.jpeg"
+            alt="Мавзолей Отеген батыра"
+            class="heritage-photo"
+        >
+
+        <p>
+            Мавзолей Отеген батыра находится в Кордайском районе
+            Жамбылской области, примерно в двух километрах
+            к северо-востоку от села Отеген.
+        </p>
+
+        <p>
+            <strong>Значение:</strong> мавзолей служит памятным местом,
+            связанным с историей батыра и сохранением памяти о нём.
+        </p>
+
+        <a href="https://archaeology.kz/heritages/99-otegen-batyr-kesenesi"
+           target="_blank" rel="noopener noreferrer">
+            Подробнее о мавзолее
+        </a>
+    </div>
+
+    <div class="heritage-card">
+        <h3>Улика № 2. Памятник Отеген батыру</h3>
+<img
+    src="monument%20new.jpg"
+    alt="Памятник Отеген батыру"
+    class="heritage-photo"
+>
+        <p>
+            Памятник находится в селе Отеген-Батыр Илийского района
+            Алматинской области. Населённый пункт носит имя
+            Отеген батыра, поэтому памятник стал частью местной
+            памяти об историческом герое.
+        </p>
+
+        <p>
+            <strong>Значение:</strong> памятник и название села
+            показывают, как имя исторической личности сохраняется
+            в современном пространстве.
+        </p>
+
+        <a href="https://ognialatau.kz/news/cat-12/3568/"
+           target="_blank" rel="noopener noreferrer">
+            Подробнее о памятнике
+        </a>
+    </div>
+
+    <h3>Вывод следствия</h3>
+
+    <p>
+        Мавзолей и памятник представляют разные формы сохранения
+        исторической памяти. Они помогают увидеть, как наследие
+        прошлого продолжает жить в памятных местах и названиях.
+    </p>
+  
+<section class="final-section">
+    <p class="final-label">ИСТОРИЧЕСКОЕ РАССЛЕДОВАНИЕ</p>
+
+<h2>07. ДЕЛО ЗАКРЫТО</h2>
+
+<div class="final-line"></div>
+
+<button
+    class="final-button"
+    id="reveal-report"
+    type="button"
+    aria-expanded="false"
+    aria-controls="final-report-content">
+    ✓ РАССЛЕДОВАНИЕ ЗАВЕРШЕНО
+</button>
+
+<div id="final-report-content" class="final-report-content" hidden>
+
+    <div class="report-block">
+        <span class="report-label">01 — ЦЕЛИ</span>
+        <h3>Цели исследования</h3>
+        <p>
+            Изучить биографию Отеген батыра, познакомиться с исторической
+            эпохой его жизни и собрать доступные сведения о его наследии.
+            Проект также направлен на развитие интереса к истории Казахстана.
+        </p>
+    </div>
+
+    <div class="report-block">
+        <span class="report-label">02 — ВЫВОДЫ</span>
+        <h3>Что показало исследование?</h3>
+        <p>
+            Изучение исторической личности помогает лучше понять события
+            прошлого и значение культурной памяти. Исторические даты
+            и биографические сведения важно проверять по источникам,
+            отделяя подтверждённые факты от преданий.
+        </p>
+    </div>
+
+    <div class="report-block">
+        <span class="report-label">03 — БУДУЩЕЕ</span>
+        <h3>Возможности для продолжения</h3>
+        <ul>
+            <li>Изучить дополнительные архивные документы и публикации.</li>
+            <li>Записать реальные воспоминания жителей и семейные предания.</li>
+            <li>Добавить фотографии и карту исторических мест.</li>
+            <li>Расширить тесты для проверки знаний об Отеген батыре и его эпохе.</li>
+        </ul>
+    </div>
+
+    <div class="report-note">
+        Этот сайт создан в информационно-образовательных целях.
+        Он помогает знакомиться с историей, повторять даты и развивать
+        навыки работы с историческими источниками.
+    </div>
+
+</div>
+
+<p class="final-caption">
+    Дело закрыто. Память остаётся.
+</p>
+</section>
+
+
+</section>
+
+</main>
+<footer>
+        «Отеген батыр: исторический детектив — расследование личности и эпохи»</footer>
+```html
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("reveal-report");
+    const content = document.getElementById("final-report-content");
+
+    if (!button || !content) return;
+
+    button.addEventListener("click", function () {
+        const opening = content.hidden;
+
+        content.hidden = !opening;
+        button.setAttribute("aria-expanded", String(opening));
+
+        if (opening) {
+            content.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        }
+    });
+});
+</script>
+```</body>
+</html>
