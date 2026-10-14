@@ -1148,6 +1148,227 @@ section:hover {
     }
 }
 
+.map-legend {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f5f0e4;
+    color: #29251d;
+    border-radius: 12px;
+}
+
+.map-legend strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.city-dot {
+    background: #3976b8;
+}
+
+.river-dot {
+    background: #269c9c;
+}
+
+.history-dot {
+    background: #b45b36;
+}
+
+#reset-history-map {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #354b38;
+    color: white;
+    cursor: pointer;
+}
+
+#reset-history-map:hover {
+    background: #26372a;
+}
+
+.secret-archive {
+    margin-top: 30px;
+    padding: 24px;
+    background: #292b26;
+    color: #f4ead7;
+    border-radius: 14px;
+}
+
+.secret-archive h3 {
+    margin-top: 0;
+    color: #e8c98b;
+}
+
+.secret-card {
+    margin-top: 14px;
+    border: 1px solid #82765f;
+    border-radius: 10px;
+    background: #373a32;
+    overflow: hidden;
+}
+
+.secret-card summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.secret-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.secret-card summary::after {
+    content: "+ ОТКРЫТЬ ДОКУМЕНТ";
+    color: #e8c98b;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.secret-card[open] summary::after {
+    content: "− ЗАКРЫТЬ ДОКУМЕНТ";
+}
+
+.secret-card summary:hover {
+    background: #45483e;
+}
+
+.secret-card summary span:first-child {
+    color: #e8c98b;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.secret-label {
+    font-size: 11px;
+    color: #c4b99f;
+}
+
+.secret-content {
+    padding: 0 18px 18px;
+    line-height: 1.7;
+    border-top: 1px solid #655d4e;
+}
+
+@media (max-width: 600px) {
+    .secret-archive {
+        padding: 16px;
+    }
+}
+
+.evidence-progress {
+    margin: 20px 0;
+    padding: 18px;
+    background: #20221e;
+    border: 1px solid #82765f;
+    border-radius: 10px;
+}
+
+.evidence-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.evidence-progress-info strong {
+    color: #f4ead7;
+}
+
+#evidence-counter {
+    color: #e8c98b;
+    font-size: 14px;
+}
+
+.evidence-progress-track {
+    height: 10px;
+    margin-top: 14px;
+    background: #45483e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#evidence-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #e8c98b;
+    border-radius: 20px;
+    transition: width 0.35s ease;
+}
+
+#evidence-progress-message {
+    margin-bottom: 0;
+    color: #c4b99f;
+    font-size: 13px;
+}
+
+.illustrations-section {
+    margin-top: 40px;
+    padding: 28px;
+    background: #ede5d5;
+    color: #29251d;
+    border-radius: 16px;
+}
+
+.illustrations-intro {
+    line-height: 1.7;
+}
+
+.comic-feature {
+    margin-top: 24px;
+    padding: 20px;
+    background: #292b26;
+    color: #f4ead7;
+    border-radius: 12px;
+}
+
+.comic-feature h3 {
+    color: #e8c98b;
+}
+
+.comic-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+    border: 3px solid #82765f;
+    border-radius: 8px;
+}
+
+.comic-caption {
+    color: #c4b99f;
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .illustrations-section {
+        padding: 16px;
+    }
+}
+
+
+
+
 
 
 
@@ -1217,25 +1438,114 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Путешествие сквозь время в поисках исторической правды</p>
     </header>
 
-    <nav>
-    <a href="#dossier">Досье</a>
-    <a href="#era">Эпоха</a>
+   
+    
+<nav>
+    <a href="#dossier">Историческое досье</a>
+    <a href="#era">Историческая эпоха</a>
     <a href="#timeline">Хронология</a>
-    <a href="#evidence">Свидетельства</a>
-    <a href="#investigation">Расследование</a>
-    <a href="#legacy">Наследие</a>
+    <a href="#evidence">Исторический архив</a>
+    <a href="#map-section">Интерактивная карта</a>
+    <a href="#investigation">Историческое расследование</a>
+    <a href="#legacy">Память и наследие</a>
+    <a href="#history-quiz">Проверь свои знания</a>
+
+
 </nav>
 
     <main>
         <section id="dossier">
     <h2>01. Историческое досье</h2>
-    <img src="batyr.jpg" alt="Портрет Отеген батыра" class="batyr-portrait">
+    
+<img
+    src="pictures/batyr_files/batyr.jpg"
+    alt="Портрет Отеген батыра"
+    class="batyr-portrait"
+>
+
     <p><strong>Имя:</strong> Отеген батыр.</p>
     <p><strong>Годы жизни:</strong> 1699–1773.</p>
     <p><strong>Эпоха:</strong> XVIII век — время борьбы казахского народа с джунгарскими захватчиками.</p>
     <p>Отеген батыр известен как казахский батыр, чьё имя связано с защитой родной земли и исторической памятью народа.</p>
     <p><strong>Цель расследования:</strong> изучить его жизненный путь, историческую эпоху и свидетельства, сохранившиеся в источниках.</p>
     <p><a href="https://e-history.kz/ru/prominent-figures/show/12672" target="_blank">Источник: портал «История Казахстана»</a></p>
+
+<div class="secret-archive">
+    
+<div class="evidence-progress">
+    <div class="evidence-progress-info">
+        <strong>Прогресс расследования</strong>
+        <span id="evidence-counter">Открыто улик: 0 из 3</span>
+    </div>
+
+    <div class="evidence-progress-track">
+        <div id="evidence-progress-bar"></div>
+    </div>
+
+    <p id="evidence-progress-message">
+        Откройте первую улику, чтобы начать расследование.
+    </p>
+</div>
+<h3>🔒 Секретный архив</h3>
+    <p>Нажмите на папку, чтобы раскрыть материал расследования.</p>
+
+    <details class="secret-card">
+        <summary>
+            <span>Улика № 01</span>
+            <strong>Личность Отеген батыра</strong>
+            <span class="secret-label">СЕКРЕТНО · ОТКРЫТЬ</span>
+        </summary>
+        <div class="secret-content">
+            <p>
+                Отеген батыр — историческая личность,
+                связанная с историей казахского народа и региона Жетысу.
+            </p>
+            <p>
+                <strong>Задание исследователю:</strong>
+                найди в исторических источниках сведения о его жизни
+                и сравни их между собой.
+            </p>
+        </div>
+    </details>
+
+    <details class="secret-card">
+        <summary>
+            <span>Улика № 02</span>
+            <strong>Памятные места</strong>
+            <span class="secret-label">СЕКРЕТНО · ОТКРЫТЬ</span>
+        </summary>
+        <div class="secret-content">
+            <p>
+                Мавзолей и памятник помогают сохранять память
+                об Отеген батыре.
+            </p>
+            <p>
+                <strong>Задание исследователю:</strong>
+                изучи фотографии памятных мест и выясни,
+                где они расположены.
+            </p>
+        </div>
+    </details>
+
+    <details class="secret-card">
+        <summary>
+            <span>Улика № 03</span>
+            <strong>Проверка исторических фактов</strong>
+            <span class="secret-label">СЕКРЕТНО · ОТКРЫТЬ</span>
+        </summary>
+        <div class="secret-content">
+            <p>
+                Не каждое утверждение из интернета является
+                подтверждённым историческим фактом.
+            </p>
+            <p>
+                <strong>Задание исследователю:</strong>
+                найти источник, проверить автора и сравнить
+                сведения с другими публикациями.
+            </p>
+        </div>
+    </details>
+</div>
 </section>
          
 <section id="era">
@@ -1383,7 +1693,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="timeline-divider"></div>
 
-    <div class="history-quiz" id="history-quiz">
+    
+
+
+<div class="history-quiz" id="history-quiz">
         <p class="quiz-overline">ПРОВЕРКА ЗНАНИЙ</p>
         <h3>Насколько хорошо вы знаете историю?</h3>
         <p class="quiz-description">
@@ -1898,11 +2211,11 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="heritage-card">
         <h3>Улика № 1. Мавзолей Отеген батыра</h3>
 
-        <img
-           src="mausoleum%20new.jpeg"
-            alt="Мавзолей Отеген батыра"
-            class="heritage-photo"
-        >
+         <img
+    src="pictures/mausoleum%20new.jpeg"
+    alt="Мавзолей Отеген батыра"
+    class="heritage-photo"
+>
 
         <p>
             Мавзолей Отеген батыра находится в Кордайском районе
@@ -1953,7 +2266,55 @@ document.addEventListener("DOMContentLoaded", function () {
         исторической памяти. Они помогают увидеть, как наследие
         прошлого продолжает жить в памятных местах и названиях.
     </p>
-  
+  </section>
+<section id="map-section" class="history-map-section">
+    <h2>07. Интерактивная историческая карта</h2>
+
+   
+<p class="map-intro">
+    Жетысу — земля с богатой историей, где переплетаются
+    судьбы казахских родов, военные походы и борьба за родную степь.
+    Изучите карту, чтобы увидеть географию края, связанного
+    с эпохой Отеген батыра.
+</p>
+
+<p class="map-note">
+    Каждая отметка открывает новую страницу исторического расследования:
+    знакомьтесь с местами, изучайте свидетельства и восстанавливай
+    картину прошлого.
+</p>
+
+
+    <div id="history-map"
+         style="height: 420px; width: 100%; border-radius: 12px;">
+    </div>
+    
+<div class="map-legend">
+    <strong>Условные обозначения</strong>
+
+    <div class="legend-item">
+        <span class="legend-dot city-dot"></span>
+        Современный город
+    </div>
+
+    <div class="legend-item">
+        <span class="legend-dot river-dot"></span>
+        Географический ориентир
+    </div>
+
+    <div class="legend-item">
+        <span class="legend-dot history-dot"></span>
+        Историческое место или район
+    </div>
+</div>
+
+<button id="reset-history-map" type="button">
+    Показать весь регион
+</button>
+
+
+    
+</section>
 <section class="final-section">
     <p class="final-label">ИСТОРИЧЕСКОЕ РАССЛЕДОВАНИЕ</p>
 
@@ -2020,6 +2381,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </section>
 
+
+
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mapElement = document.getElementById("history-map");
+
+    if (!mapElement || typeof L === "undefined") return;
+
+    const map = L.map("history-map").setView([44.5, 76.5], 6);
+    
+document.getElementById("reset-history-map")
+    .addEventListener("click", function () {
+        map.setView([44.5, 76.5], 6);
+    });
+
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+   L.marker([45.0156, 78.3739], {
+    icon: L.divIcon({
+        className: "",
+        html: '<div style="background:#3976b8;width:20px;height:20px;border:3px solid white;border-radius:50%;box-shadow:0 1px 6px #555"></div>',
+        iconSize: [26, 26],
+        iconAnchor: [13, 13]
+    })
+})
+        .addTo(map)
+        .bindPopup(`
+            <h3>Талдыкорган</h3>
+            <p>Современный город Жетысу — географический ориентир региона.</p>
+        `);
+
+L.marker([43.9, 77.0], {
+    icon: L.divIcon({
+        className: "",
+        html: '<div style="background:#269c9c;width:20px;height:20px;border:3px solid white;border-radius:50%;box-shadow:0 1px 6px #555"></div>',
+        iconSize: [26, 26],
+        iconAnchor: [13, 13]
+    })
+})
+        .addTo(map)
+        .bindPopup(`
+            <h3>Река Или</h3>
+            <p>В исторической биографии Отеген батыра упоминается его участие
+            в борьбе против джунгар в районе реки Или.</p>
+            <a href="https://e-history.kz/ru/prominent-figures/show/12672"
+               target="_blank" rel="noopener">Читать источник</a>
+        `);
+
+   L.marker([43.0, 74.7], {
+    icon: L.divIcon({
+        className: "",
+        html: '<div style="background:#b45b36;width:20px;height:20px;border:3px solid white;border-radius:50%;box-shadow:0 1px 6px #555"></div>',
+        iconSize: [26, 26],
+        iconAnchor: [13, 13]
+    })
+})
+        .addTo(map)
+        .bindPopup(`
+            <h3>Кордайский район</h3>
+            <p>В источниках упоминается перезахоронение останков
+            Отеген батыра в этом районе. Точка приблизительная.</p>
+        `);
+        
+    // Путь Отеген батыра
+    L.polyline([
+        [45.0156, 78.3739],
+        [43.9, 77.0],
+        [43.0, 74.7]
+    ], {
+        color: "#b45b36",
+        weight: 4,
+        opacity: 0.9,
+        dashArray: "8, 8"
+    }).addTo(map)
+      .bindPopup("Путь Отеген батыра");
+
+});
+</script>
+
 </main>
 <footer>
         «Отеген батыр: исторический детектив — расследование личности и эпохи»</footer>
@@ -2046,5 +2497,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-```</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const archive = document.querySelector(".secret-archive");
+    if (!archive) return;
+
+    const cards = archive.querySelectorAll("details.secret-card");
+    const counter = document.getElementById("evidence-counter");
+    const bar = document.getElementById("evidence-progress-bar");
+    const message = document.getElementById("evidence-progress-message");
+
+    function updateProgress() {
+        const total = cards.length;
+        const opened = archive.querySelectorAll("details.secret-card[open]").length;
+        const percent = total ? (opened / total) * 100 : 0;
+
+        counter.textContent = `Открыто улик: ${opened} из ${total}`;
+        bar.style.width = percent + "%";
+
+        if (opened === total && total > 0) {
+            message.textContent = "Все улики изучены! Расследование завершено.";
+        } else if (opened > 0) {
+            message.textContent = "Отлично! Продолжайте изучать материалы досье.";
+        } else {
+            message.textContent = "Откройте первую улику, чтобы начать расследование.";
+        }
+    }
+
+    cards.forEach(function (card) {
+        card.addEventListener("toggle", updateProgress);
+    });
+
+    updateProgress();
+});
+</script>
+</body>
 </html>
